@@ -28,9 +28,9 @@ def silver():
 def gold():
     """The gold star solution."""
     total_points = 0
-    moves = {"A": {"X": LOSS + 3, "Y": DRAW + 1, "Z": WIN + 2},
-             "B": {"X": LOSS + 1, "Y": DRAW + 2, "Z": WIN + 3},
-             "C": {"X": LOSS + 2, "Y": DRAW + 3, "Z": WIN + 1}}
+    moves = {"A": {"X": LOSS+3, "Y": DRAW+1, "Z": WIN+2},
+             "B": {"X": LOSS+1, "Y": DRAW+2, "Z": WIN+3},
+             "C": {"X": LOSS+2, "Y": DRAW+3, "Z": WIN+1}}
 
     with open("day2_input.txt", mode="r") as input_file:
         for line in input_file:
