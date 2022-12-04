@@ -4,6 +4,7 @@ Day 4 puzzles of the Advent of Code.
 
 
 def silver():
+    """The silver star solution."""
     total_overlaps = 0
 
     with open("day4_input.txt", mode="r") as input_file:
@@ -24,6 +25,7 @@ def silver():
 
 
 def gold():
+    """The gold star solution."""
     total_overlaps = 0
 
     with open("day4_input.txt", mode="r") as input_file:
