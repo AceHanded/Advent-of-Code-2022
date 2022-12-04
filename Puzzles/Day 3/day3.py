@@ -9,6 +9,7 @@ CHARS = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "
 
 
 def silver():
+    """The silver star solution."""
     total_priority = 0
 
     with open("day3_input.txt", mode="r") as input_file:
@@ -26,6 +27,7 @@ def silver():
 
 
 def gold():
+    """The gold star solution."""
     total_priority = 0
     lines = []
 
@@ -46,6 +48,7 @@ def gold():
 
 
 def find_common_character(lines):
+    """Finds the common character in three subsequent character groups."""
     priority = 0
 
     for line in lines:
