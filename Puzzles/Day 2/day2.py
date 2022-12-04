@@ -9,6 +9,7 @@ WIN = 6
 
 
 def silver():
+    """The silver star solution."""
     total_points = 0
     moves = {"A": {"X": DRAW+1, "Y": WIN+2,  "Z": LOSS+3},
              "B": {"X": LOSS+1, "Y": DRAW+2, "Z": WIN+3},
@@ -25,6 +26,7 @@ def silver():
 
 
 def gold():
+    """The gold star solution."""
     total_points = 0
     moves = {"A": {"X": LOSS + 3, "Y": DRAW + 1, "Z": WIN + 2},
              "B": {"X": LOSS + 1, "Y": DRAW + 2, "Z": WIN + 3},
