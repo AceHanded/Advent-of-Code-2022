@@ -4,6 +4,7 @@ Day 1 puzzles of the Advent of Code.
 
 
 def silver():
+    """The silver star solution."""
     calories = []
     total_calories = 0
 
@@ -21,6 +22,7 @@ def silver():
 
 
 def gold():
+    """The gold star solution."""
     calories = []
     total_calories = 0
     max_calories = 0
