@@ -86,6 +86,7 @@ def gold():
 
 
 def join_directories(current_directory):
+    """Creates a set of directories, where each subsequent directory contains the previous directories."""
     joined_directories = [''.join(current_directory[:index + 1]) for index in range(0, len(current_directory))]
 
     return joined_directories
