@@ -39,7 +39,7 @@ def silver():
             if directories[key] <= 100000:
                 total_sizes += directories[key]
 
-        return total_sizes
+    return total_sizes
 
 
 def gold():
@@ -82,11 +82,11 @@ def gold():
                 if deleted_directory_size == 0 or deleted_directory_size > directories[key]:
                     deleted_directory_size = directories[key]
 
-        return deleted_directory_size
+    return deleted_directory_size
 
 
 def join_directories(current_directory):
-    """Creates a set of directories, where each subsequent directory contains the previous directories."""
+    """Creates a list of directories, where each subsequent directory name contains the previous directory names."""
     joined_directories = [''.join(current_directory[:index + 1]) for index in range(0, len(current_directory))]
 
     return joined_directories
