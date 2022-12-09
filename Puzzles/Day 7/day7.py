@@ -35,9 +35,9 @@ def silver():
 
                         directories[directory] += int(value)
 
-        for key in directories:
-            if directories[key] <= 100000:
-                total_sizes += directories[key]
+    for key in directories:
+        if directories[key] <= 100000:
+            total_sizes += directories[key]
 
     return total_sizes
 
@@ -74,13 +74,13 @@ def gold():
 
                         directories[directory] += int(value)
 
-        space_available = 70000000 - directories['/']
-        space_required = 30000000 - space_available
+    space_available = 70000000 - directories['/']
+    space_required = 30000000 - space_available
 
-        for key in directories:
-            if directories[key] > space_required:
-                if deleted_directory_size == 0 or deleted_directory_size > directories[key]:
-                    deleted_directory_size = directories[key]
+    for key in directories:
+        if directories[key] > space_required:
+            if deleted_directory_size == 0 or deleted_directory_size > directories[key]:
+                deleted_directory_size = directories[key]
 
     return deleted_directory_size
 

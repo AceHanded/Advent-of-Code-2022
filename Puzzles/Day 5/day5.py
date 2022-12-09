@@ -21,8 +21,8 @@ def silver():
                     crates[to].append(crates[from_][-1])
                     del crates[from_][-1]
 
-        for key in crates:
-            top_crates += crates[key][-1]
+    for key in crates:
+        top_crates += crates[key][-1]
 
     return top_crates
 
@@ -44,8 +44,8 @@ def gold():
                 crates[to].extend(crates[from_][len(crates[from_]) - int(amount):len(crates[from_])])
                 del crates[from_][len(crates[from_]) - int(amount):len(crates[from_])]
 
-        for key in crates:
-            top_crates += crates[key][-1]
+    for key in crates:
+        top_crates += crates[key][-1]
 
     return top_crates
 

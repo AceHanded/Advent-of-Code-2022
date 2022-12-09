@@ -23,7 +23,7 @@ def silver():
                     total_priority += CHARS.index(character) + 1
                     break
 
-        return total_priority
+    return total_priority
 
 
 def gold():
@@ -44,7 +44,7 @@ def gold():
 
         total_priority += find_common_character(lines)
 
-        return total_priority
+    return total_priority
 
 
 def find_common_character(lines):
