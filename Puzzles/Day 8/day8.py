@@ -1,5 +1,5 @@
 """
-Day 8 puzzles of the Advent of Code.
+Day 8 puzzles of the Advent of Code (8/25).
 """
 
 

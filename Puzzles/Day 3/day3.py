@@ -1,5 +1,5 @@
 """
-Day 3 puzzles of the Advent of Code.
+Day 3 puzzles of the Advent of Code (3/25).
 """
 
 

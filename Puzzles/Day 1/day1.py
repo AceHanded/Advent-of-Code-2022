@@ -1,5 +1,5 @@
 """
-Day 1 puzzles of the Advent of Code.
+Day 1 puzzles of the Advent of Code (1/25).
 """
 
 

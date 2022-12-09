@@ -1,5 +1,5 @@
 """
-Day 6 puzzles of the Advent of Code.
+Day 6 puzzles of the Advent of Code (6/25).
 """
 
 

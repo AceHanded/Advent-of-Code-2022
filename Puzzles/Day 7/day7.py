@@ -1,5 +1,5 @@
 """
-Day 7 puzzles of the Advent of Code.
+Day 7 puzzles of the Advent of Code (7/25).
 """
 
 
