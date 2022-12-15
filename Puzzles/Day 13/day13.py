@@ -5,14 +5,14 @@ Day 13 puzzles of the Advent of Code (13/25).
 
 def silver():
     """The silver star solution."""
+    total_indices = 0
+    index = 0
     lines = []
     packets = []
-    index = 0
-    total_indices = 0
 
     with open("day13_input.txt", mode="r") as input_file:
         for line in input_file:
-            line = line.strip()
+            line = line.rstrip()
 
             lines.append(line)
 
@@ -35,9 +35,9 @@ def silver():
 
 def gold():
     """The gold star solution."""
+    decoder_key = 0
     lines = []
     packets = []
-    decoder_key = 0
 
     with open("day13_input.txt", mode="r") as input_file:
         for line in input_file:

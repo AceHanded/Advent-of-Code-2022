@@ -28,12 +28,12 @@ def silver():
             y_start[0] += y_move
 
             for position in range(rope_length - 1):
-                x_change = x_start[position + 1] - x_start[position]
-                y_change = y_start[position + 1] - y_start[position]
+                x_delta = x_start[position + 1] - x_start[position]
+                y_delta = y_start[position + 1] - y_start[position]
 
-                if abs(x_change) == 2 or abs(y_change) == 2:
-                    x_start[position + 1] = x_start[position] + int(x_change / 2)
-                    y_start[position + 1] = y_start[position] + int(y_change / 2)
+                if abs(x_delta) == 2 or abs(y_delta) == 2:
+                    x_start[position + 1] = x_start[position] + int(x_delta / 2)
+                    y_start[position + 1] = y_start[position] + int(y_delta / 2)
 
             visited_positions.add((x_start[-1], y_start[-1]))
 

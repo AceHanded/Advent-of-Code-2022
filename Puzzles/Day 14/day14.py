@@ -24,6 +24,7 @@ def silver():
             first_column = int(line[rock_index - 1][0])
             second_row = int(line[rock_index][1])
             second_column = int(line[rock_index][0])
+
             if first_row > max_row:
                 max_row = first_row
             if second_row > max_row:
@@ -31,11 +32,13 @@ def silver():
             elif first_row == second_row:
                 if first_column > second_column:
                     first_column, second_column = second_column, first_column
+
                 for column in range(first_column, second_column + 1):
                     rock[(first_row, column)] = 1
             else:
                 if first_row > second_row:
                     first_row, second_row = second_row, first_row
+
                 for row in range(first_row, second_row + 1):
                     rock[(row, first_column)] = 1
 
@@ -47,6 +50,7 @@ def silver():
 
         while True:
             down, down_left, down_right = (rest[0] + 1, rest[1]), (rest[0] + 1, rest[1] - 1), (rest[0] + 1, rest[1] + 1)
+
             if down not in rock:
                 rest = down
                 continue
@@ -58,6 +62,7 @@ def silver():
                 continue
 
             rock[rest] = 2
+
             if rest[0] > max_row:
                 sand_can_fall = False
                 break
@@ -89,6 +94,7 @@ def gold():
             first_column = line[index - 1][0]
             second_row = line[index][1]
             second_column = line[index][0]
+
             if first_row > max_row:
                 max_row = first_row
             if second_row > max_row:
@@ -96,11 +102,13 @@ def gold():
             elif first_row == second_row:
                 if first_column > second_column:
                     first_column, second_column = second_column, first_column
+
                 for column in range(first_column, second_column + 1):
                     rock[(first_row, column)] = 1
             else:
                 if first_row > second_row:
                     first_row, second_row = second_row, first_row
+
                 for row in range(first_row, second_row + 1):
                     rock[(row, first_column)] = 1
 
@@ -116,6 +124,7 @@ def gold():
 
         while True:
             down, down_left, down_right = (rest[0] + 1, rest[1]), (rest[0] + 1, rest[1] - 1), (rest[0] + 1, rest[1] + 1)
+
             if down not in rock:
                 rest = down
                 continue
@@ -127,6 +136,7 @@ def gold():
                 continue
 
             rock[rest] = 2
+
             if rest[0] > max_row:
                 total_units += 1
                 break
