@@ -34,7 +34,7 @@ def silver():
 
     orders = all_orders(distances, start_valve, valves_with_flow, [], 30)
 
-    highest_pressure += max(run_order(distances, flow_rates, start_valve, order, 30) for order in orders)
+    highest_pressure += max(calculate_pressure(distances, flow_rates, start_valve, order, 30) for order in orders)
 
     return highest_pressure
 
@@ -66,19 +66,19 @@ def gold():
         distances[name] = {valve: connections for valve, connections in valve_distances.items() if flow_rates[valve]}
 
     orders = all_orders(distances, start_valve, valves_with_flow, [], 30)
-    scores = [(run_order(distances, flow_rates, start_valve, order, 26), set(order)) for order in orders]
-    scores.sort(key=lambda x: -x[0])
+    results = [(calculate_pressure(distances, flow_rates, start_valve, order, 26), set(order)) for order in orders]
+    results.sort(key=lambda x: -x[0])
 
-    for index, (scores_score, scores_orders) in enumerate(scores):
-        if scores_score * 2 < highest_pressure:
+    for index, (result_pressure, result_orders) in enumerate(results):
+        if result_pressure * 2 < highest_pressure:
             break
 
-        for scores_score2, scores_orders2 in scores[index + 1:]:
-            if not scores_orders & scores_orders2:
-                score = scores_score + scores_score2
+        for result_pressure2, result_orders2 in results[index + 1:]:
+            if not result_orders & result_orders2:
+                pressure = result_pressure + result_pressure2
 
-                if score > highest_pressure:
-                    highest_pressure = score
+                if pressure > highest_pressure:
+                    highest_pressure = pressure
 
     return highest_pressure
 
@@ -111,7 +111,7 @@ def all_orders(distances, valve, queue, finished, minutes):
     yield finished
 
 
-def run_order(distances, flow_rates, start_valve, valves, minutes):
+def calculate_pressure(distances, flow_rates, start_valve, valves, minutes):
     """Calculates the amount of pressure released."""
     pressure_release = 0
     current_valve = start_valve
