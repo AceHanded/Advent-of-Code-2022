@@ -13,8 +13,8 @@ def silver():
             droplet.add(tuple(map(int, line.split(","))))
 
     total_area += 6 * len(droplet)
-    min_value = min(min(point) for point in droplet) - 1
-    max_value = max(max(point) for point in droplet) + 1
+    min_value = min(min(cube) for cube in droplet) - 1
+    max_value = max(max(cube) for cube in droplet) + 1
 
     for cube in droplet:
         x_coordinate, y_coordinate, z_coordinate = cube
@@ -47,8 +47,8 @@ def gold():
         for line in input_file:
             droplet.add(tuple(map(int, line.split(","))))
 
-    min_value = min(min(point) for point in droplet) - 1
-    max_value = max(max(point) for point in droplet) + 1
+    min_value = min(min(cube) for cube in droplet) - 1
+    max_value = max(max(cube) for cube in droplet) + 1
 
     exterior = [(min_value, min_value, min_value)]
     steam = {exterior[0]}
@@ -75,8 +75,7 @@ def gold():
             if sides in droplet:
                 total_area += 1
             else:
-                steam.add(sides)
-                exterior.append(sides)
+                steam.add(sides), exterior.append(sides)
 
     return total_area
 
