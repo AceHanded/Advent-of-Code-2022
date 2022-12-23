@@ -36,10 +36,9 @@ def silver():
                 tiles[x_coordinate + y_coordinate * 1j] = tile
 
     for instruction in path[1]:
-        try:
-            instruction = int(instruction)
-            symbols += str(instruction)
-        except ValueError:
+        if instruction.isdigit():
+            symbols += instruction
+        else:
             instructions.append((symbols, instruction))
             symbols = ""
 
@@ -112,10 +111,9 @@ def gold():
                 tiles[x_coordinate + y_coordinate * 1j] = tile
 
     for instruction in path[1]:
-        try:
-            instruction = int(instruction)
-            symbols += str(instruction)
-        except ValueError:
+        if instruction.isdigit():
+            symbols += instruction
+        else:
             instructions.append((symbols, instruction))
             symbols = ""
 
