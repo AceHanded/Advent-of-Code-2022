@@ -121,7 +121,7 @@ def create_operation_function(value, operator):
 
 
 def create_test_function(divisor, monkey_if_true, monkey_if_false):
-    """Creates a lambda function for calculating whether or not the current worry level is
+    """Creates a lambda function for calculating whether the current worry level is
     divisible by the divisor."""
     return lambda x: monkey_if_true if x % divisor == 0 else monkey_if_false
 
